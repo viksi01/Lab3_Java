@@ -16,7 +16,7 @@ public class Main {
         final List<Product> products = FileService.loadProductsFromFile(productsFilePath);
         products.forEach(product -> productStore.addProduct(product));
 
-        final Product product1 = new Product("Banana", 30.0, 5, ProductType.FRUIT);
+        final Product product1 = new Product("Banana", 30.0, 6, ProductType.FRUIT);
         final Product product2 = new Product("Pork", 50.0, 10, ProductType.MEAT);
         final Product product3 = products.get(0);
         final Product product4 = products.get(1);
