@@ -1,0 +1,2 @@
+Meat,12,2,MEAT
+Apple,2,10,FRUIT

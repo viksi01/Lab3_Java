@@ -1,0 +1,8 @@
+Customer: Vika
+Banana,30.0,1.0
+Pork,50.0,2.0
+Meat,12.0,1.0
+Total price: 142.0
+Comment: Dont forget to store Pork in the fridge!
+Dont forget to store Meat in the fridge!
+Package added!
