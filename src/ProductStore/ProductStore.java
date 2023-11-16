@@ -11,7 +11,7 @@ public class ProductStore {
     public boolean isInStock(final Product product, final int amount) {
         return products.stream()
                 .anyMatch(p -> p.getName().equals(product.getName()) && p.getAmount() >= amount);
-    }
+    } 
 
     public void addProduct(final Product product) {
         products.add(product);

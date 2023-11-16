@@ -30,7 +30,8 @@ public class Receipt {
 
     public void printReceipt() {
         System.out.println("Customer: " + customer.getName());
-        products.forEach(product -> System.out.println(product.getName() + "," + product.getPrice() + "," + product.getAmount()));
+        products.stream()
+                .forEach(p -> System.out.println(p.getName() + "," + p.getPrice() + "," + p.getAmount()));
         System.out.println("Total price: " + getTotalPrice());
     }
 
@@ -45,7 +46,7 @@ public class Receipt {
                 .filter(p -> p.getType().equals(ProductType.MEAT) || p.getType().equals(ProductType.FISH))
                 .forEach(p -> {
                     try {
-                        writer.write("Dont forget to store " + p.getName() + " in the fridge!\n");
+                        writer.write("Don't forget to store " + p.getName() + " in the fridge!\n");
                     } catch (final IOException e) {
                         e.printStackTrace();
                     }

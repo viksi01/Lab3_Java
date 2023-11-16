@@ -16,7 +16,7 @@ public class FileService {
         try (final BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             return reader.lines()
                     .map(FileService::parseProduct)
-                    .filter(product -> product != null)
+                    .filter(p -> p != null)
                     .collect(Collectors.toList());
         } catch (final IOException | NumberFormatException e) {
             throw new LoadFromFileException();
@@ -58,9 +58,6 @@ public class FileService {
             throw new ReceiptException();
         }
     }
-
-
-
 
     private static Product parseProduct(final String line) {
         final int lenghtNumber = 4;
